@@ -152,26 +152,16 @@ const Carousel = ({
               ></iframe>
             </div>
           </div>
-          <div className="mt-128">
-            ❤️‍🔥 I hope ur having a wonderful day boo ❤️‍🔥
-          </div>
+          <iframe
+            src="https://giphy.com/embed/LYRSRTWa9oD8fdvV4C"
+            width="480"
+            height="418"
+            frameBorder="0"
+            class="giphy-embed"
+            allowFullScreen
+          ></iframe>
+          <div>❤️‍🔥 I hope ur having a wonderful day boo ❤️‍🔥</div>
           <div>I have a question for you...</div>
-          <div className="letter-image">
-            <div className="animated-mail">
-              <div className="back-fold"></div>
-              <div className="letter">
-                <div className="letter-border"></div>
-                <div className="letter-title"></div>
-                <div className="letter-context"></div>
-                <div className="letter-stamp">
-                  <div className="letter-stamp-inner"></div>
-                </div>
-              </div>
-              <div className="top-fold"></div>
-              <div className="body"></div>
-              <div className="left-fold"></div>
-            </div>
-          </div>
         </div>
       );
     case Steps.WillYouBeMyValentine:

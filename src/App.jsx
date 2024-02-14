@@ -27,6 +27,48 @@ const Flow = [
   Steps.Goodbye,
 ];
 
+const pairMap = {
+  meyers: {
+    text: "introspective INFP type 4",
+    gif: (
+      <iframe
+        src="https://giphy.com/embed/Xg9qVfblOUg5oMBS1v"
+        width="480"
+        height="262"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen
+      ></iframe>
+    ),
+  },
+  sleepers: {
+    text: "sensitive sleepy moomin",
+    gif: (
+      <iframe
+        src="https://giphy.com/embed/1037XzaGpW6xMc"
+        width="480"
+        height="324"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen
+      ></iframe>
+    ),
+  },
+  elements: {
+    text: "fiery steel type",
+    gif: (
+      <iframe
+        src="https://giphy.com/embed/IeKpg7M6wu7W8"
+        width="400"
+        height="350"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen
+      ></iframe>
+    ),
+  },
+};
+
 const artistMap = {
   tyler: {
     yt: (
@@ -84,7 +126,6 @@ const artistMap = {
 
 const Carousel = ({
   step,
-  setStep,
   accepted,
   setAccepted,
   candy,
@@ -95,47 +136,6 @@ const Carousel = ({
   setArtist,
 }) => {
   const pairSize = 120;
-  const pairMap = {
-    meyers: {
-      text: "introspective INFP type 4",
-      gif: (
-        <iframe
-          src="https://giphy.com/embed/Xg9qVfblOUg5oMBS1v"
-          width="480"
-          height="262"
-          frameBorder="0"
-          class="giphy-embed"
-          allowFullScreen
-        ></iframe>
-      ),
-    },
-    sleepers: {
-      text: "sensitive sleepy moomin",
-      gif: (
-        <iframe
-          src="https://giphy.com/embed/1037XzaGpW6xMc"
-          width="480"
-          height="324"
-          frameBorder="0"
-          class="giphy-embed"
-          allowFullScreen
-        ></iframe>
-      ),
-    },
-    elements: {
-      text: "fiery steel type",
-      gif: (
-        <iframe
-          src="https://giphy.com/embed/IeKpg7M6wu7W8"
-          width="400"
-          height="350"
-          frameBorder="0"
-          class="giphy-embed"
-          allowFullScreen
-        ></iframe>
-      ),
-    },
-  };
   switch (step) {
     case Steps.Hello:
       return (
@@ -224,7 +224,7 @@ const Carousel = ({
         <div>
           <div>Choose a snackie</div>
           <RadioGroup
-            value={candy === undefined ? undefined : candy}
+            value={candy}
             onChange={(value) => setCandy(value)}
             horizontal
           >
@@ -267,7 +267,7 @@ const Carousel = ({
 
           <div>Now, choose the best pair</div>
           <RadioGroup
-            value={pair === undefined ? undefined : pair}
+            value={pair}
             onChange={(value) => setPair(value)}
             horizontal
           >
@@ -305,7 +305,7 @@ const Carousel = ({
           {pairMap[pair].gif}
           <div>And choose ur fave artist</div>
           <RadioGroup
-            value={artist === undefined ? undefined : artist}
+            value={artist}
             onChange={(value) => setArtist(value)}
             horizontal
           >
@@ -340,7 +340,6 @@ const Carousel = ({
           </RadioGroup>
         </div>
       );
-
     case Steps.Goodbye:
       return (
         <div className="flex-col">
@@ -377,8 +376,6 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { value } = e.target;
-
-    console.log({ value, e });
     let curStep = Flow.findIndex((s) => s === step);
     if (curStep < 0) {
       curStep = 2;

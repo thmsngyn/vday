@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/vday/static/css/main.b2b63f99.css",
+    "main.js": "/vday/static/js/main.0071b6d0.js",
+    "static/js/787.edd59a96.chunk.js": "/vday/static/js/787.edd59a96.chunk.js",
+    "static/media/elements.png": "/vday/static/media/elements.ad0f89fd64ac2f212803.png",
+    "static/media/gracie.png": "/vday/static/media/gracie.0ca066dffcb72b6904f9.png",
+    "static/media/jennie.png": "/vday/static/media/jennie.331900ca8ae172f7fe9a.png",
+    "static/media/meyers.jpg": "/vday/static/media/meyers.4b5a71397766a6408758.jpg",
+    "static/media/sleepers.jpg": "/vday/static/media/sleepers.6ea59070dc51033485cc.jpg",
+    "static/media/tyler.png": "/vday/static/media/tyler.1d21c78818696735aa1f.png",
+    "static/media/peppa.png": "/vday/static/media/peppa.1e55db511967aa119082.png",
+    "static/media/taylor.jpeg": "/vday/static/media/taylor.c3475a3a21eb06cc2df8.jpeg",
+    "static/media/sourpatch.jpeg": "/vday/static/media/sourpatch.6031f7bba6c299c05ac4.jpeg",
+    "static/media/fish.jpeg": "/vday/static/media/fish.0e6994f511b92326600b.jpeg",
+    "static/media/logo.svg": "/vday/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/vday/index.html",
+    "main.b2b63f99.css.map": "/vday/static/css/main.b2b63f99.css.map",
+    "main.0071b6d0.js.map": "/vday/static/js/main.0071b6d0.js.map",
+    "787.edd59a96.chunk.js.map": "/vday/static/js/787.edd59a96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2b63f99.css",
+    "static/js/main.0071b6d0.js"
+  ]
+}
